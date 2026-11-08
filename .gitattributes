@@ -1,0 +1,4 @@
+# Normalize line endings for source and docs; keep archives binary.
+* text=auto eol=lf
+*.tgz binary
+*.zip binary

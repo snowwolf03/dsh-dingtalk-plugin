@@ -1,0 +1,71 @@
+{
+  "name": "dsh-dingtalk-plugin",
+  "version": "1.1.261022",
+  "private": true,
+  "type": "module",
+  "description": "DingTalk for DeepSeek Harness Desktop: enter the app Client ID and Client Secret, then chat with this computer's DSH agent from a DingTalk bot. v1.1 adds optional new-session presets (personality markdown, workspace, agent preset, permission, model, reasoning effort) plus a six-fact self introduction. ©snowwolf03",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dingtalk",
+    "channel",
+    "im-bot",
+    "cordis",
+    "plugin"
+  ],
+  "license": "MIT",
+  "author": "snowwolf03",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snowwolf03/dsh-dingtalk-plugin.git"
+  },
+  "homepage": "https://github.com/snowwolf03/dsh-dingtalk-plugin#readme",
+  "bugs": {
+    "url": "https://github.com/snowwolf03/dsh-dingtalk-plugin/issues"
+  },
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "settings.js",
+    "session-preset.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "README.zh-CN.md",
+    "test/*.mjs"
+  ],
+  "dependencies": {
+    "@dingtalk-real-ai/dsh-dingtalk": "^0.10.2"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "scripts": {
+    "test": "node --test test/host.test.mjs test/session-preset.test.mjs",
+    "test:client": "node test/client.harness.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  }
+}

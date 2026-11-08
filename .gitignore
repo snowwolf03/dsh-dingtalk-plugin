@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Release artifacts (published as GitHub Release assets, not committed)
+*.tgz
+*.zip
+
+# Local environment / secrets — never commit credentials
+.env
+.env.*
+*.local
+*.pem
+*.key
+
+# Machine-local development directories
+.research/
+backup/
+.tmp/
+
+# OS / editor noise
+Thumbs.db
+.DS_Store
+*.log
+.vscode/
+.idea/

@@ -1,0 +1,39 @@
+# DingTalk for DSH Desktop — one bundle, two rows. v1.1.261022 · ©snowwolf03
+#
+# `dingtalk-channel` is the official DingTalk connector, inserted here with the
+# preset that makes "Client ID + Client Secret" enough: no `npx dsh-dingtalk
+# setup`, no private-chat `/bind` password, no AI-card template. Markdown replies
+# are used because they need only the robot's "send message" permission.
+#
+# `dsh-dingtalk-plugin` is this package's Host half: the Settings page's routes
+# read and write the connector row through DSH's own configuration editor, which
+# persists to this profile's cordis.patch.yml and recomposes the row, so saving
+# credentials reconnects the Stream without restarting the app. The same Host
+# half seeds every new DingTalk session from the optional "new-session preset"
+# settings (agent preset, permission, model, reasoning effort, personality md)
+# and adds the six-fact self introduction (see session-preset.js).
+- insert:
+    - id: dingtalk-channel
+      name: '@dingtalk-real-ai/dsh-dingtalk'
+      config:
+        # Root credentials are read only while `accounts` is empty.
+        accounts: []
+        # The connector denies every message until it has an owner (an empty
+        # ownerStaffId routes all traffic into the one-time `/bind` gate). A
+        # sentinel owner opens that gate for the access policy below; users who
+        # want native approvals paste their real staffId in Settings instead.
+        ownerStaffId: 'dsh-user'
+        senderAccess: all
+        groupAccess: all
+        # Markdown needs only the robot's "send message" permission; AI cards
+        # would additionally need an interaction-card template.
+        replyMode:
+          direct: markdown
+          group: markdown
+        emotionFirstResponse: false
+        tools:
+          enabled: false
+        digitalEmployees: []
+        rejectNotice: true
+    - id: dsh-dingtalk-plugin
+      name: 'dsh-dingtalk-plugin'
