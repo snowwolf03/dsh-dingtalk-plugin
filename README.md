@@ -6,10 +6,17 @@
 项目：ESM JavaScript
 
 ## 一、效果示例
-应用凭据：填写钉钉企业内部应用的 Client ID / Client Secret，测试连接，成功则点击保存并连接
+在 插件 选择安装的插件，启动
+<img width="1046" height="886" alt="76DB9CCA-2463-45e8-9F26-C42203B90E34" src="https://github.com/user-attachments/assets/56f721ed-acf0-4111-b6db-1530650b63d8" />
+插件需要在 左下角-更多-设置 配置，点击应用凭据，填写钉钉企业内部应用的 Client ID / Client Secret，测试连接，成功则点击保存并连接
+<img width="786" height="469" alt="37AC4B1D-FDBF-4d07-85F8-2DF722B2C70D" src="https://github.com/user-attachments/assets/543dacfd-31e3-4fb7-ab95-1117d3c4a3a0" />
+填写相关内容
+<img width="582" height="527" alt="FECE5992-F202-4a6c-B055-3E68EFD186C3" src="https://github.com/user-attachments/assets/43dc254d-3213-4cc8-b789-81159530da2f" />
 访问范围：管理员 staffId、私聊策略（所有人 / 仅管理员 / 管理员 + 白名单）、群聊策略（所有群 / 禁止 / 白名单群）、额外允许的 staffId、群 openConversationId 白名单。
 重新连接 / 刷新状态
-会话工作目录：新建钉钉会话时 Agent 在主机的工作目录。
+会话工作目录等：新建钉钉会话时 Agent 在主机的工作目录。
+<img width="562" height="396" alt="140B6A5B-EC71-47b3-9021-0EA1CC3AC986" src="https://github.com/user-attachments/assets/150a4811-0f3e-4e08-8325-be490b421251" />
+
 设置页永远拿不到 Client Secret：浏览器只拿到 hasSecret 标志和密钥尾号。
 
 ## 二、安装方式
