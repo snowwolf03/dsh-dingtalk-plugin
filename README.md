@@ -1,9 +1,9 @@
 # DSH桌面版介入钉钉机器人
 把钉钉机器人接入DeepSeek Harness（DSH）桌面版 主机锁屏时，在手机上给机器人发消息，DSH Agent 干活并在钉钉回复。 支持拉群及命令下发者白名单
 
-插件版本： 1.1.261022 · 许可证： MIT 适配版本：DSH 桌面版 44.7.0、@dingtalk-real-ai/dsh-dingtalk0.10.2 项目：ESM JavaScript
-
-English documentation: README.md
+插件版本： 1.1.261022 · 许可证： MIT 
+适配版本：DSH 桌面版 44.7.0、@dingtalk-real-ai/dsh-dingtalk0.10.2 
+项目：ESM JavaScript
 
 ## 一、效果示例
 应用凭据：填写钉钉企业内部应用的 Client ID / Client Secret，测试连接，成功则点击保存并连接
