@@ -12,6 +12,7 @@
 <img width="786" height="469" alt="37AC4B1D-FDBF-4d07-85F8-2DF722B2C70D" src="https://github.com/user-attachments/assets/543dacfd-31e3-4fb7-ab95-1117d3c4a3a0" />
 填写相关内容
 <img width="582" height="527" alt="FECE5992-F202-4a6c-B055-3E68EFD186C3" src="https://github.com/user-attachments/assets/43dc254d-3213-4cc8-b789-81159530da2f" />
+
 访问范围：管理员 staffId、私聊策略（所有人 / 仅管理员 / 管理员 + 白名单）、群聊策略（所有群 / 禁止 / 白名单群）、额外允许的 staffId、群 openConversationId 白名单。
 重新连接 / 刷新状态
 会话工作目录等：新建钉钉会话时 Agent 在主机的工作目录。
@@ -23,13 +24,17 @@
 方式 A：插件面板
 下载 dsh-dingtalk-plugin-1.1.261022.tgz
 DSH 桌面版 → 插件 → 添加插件，填入该tgz的绝对路径：<你的下载目录>\dsh-dingtalk-plugin-1.1.261022.tgz。
-等安装完成，点立即启用
+等安装完成，点立即启用；
 重启 DSH 桌面版
+
 方式 B：从源码目录安装
 在「添加插件」里选择 dsh-dingtalk-plugin
 
 ## 三、测试文件夹
-用以检查测试文件是否全部安装，检测方法如下 进入主机deepseek harness插件目录（默认C:\Users\Administrator\Documents\deepseek-harness\default-workspace\） cd C:\Users\Administrator\Documents\deepseek-harness\default-workspace\dsh-dingtalk-plugin node --test test/host.test.mjs test/session-preset.test.mjs node test/client.harness.mjs
+用以检查测试文件是否全部安装，检测方法如下 进入主机deepseek harness插件目录（默认C:\Users\Administrator\Documents\deepseek-harness\default-workspace\） 
+cd C:\Users\Administrator\Documents\deepseek-harness\default-workspace\dsh-dingtalk-plugin 
+node --test test/host.test.mjs test/session-preset.test.mjs 
+node test/client.harness.mjs
 
 ## 四、FAQ
 ### 4.1 是否涉及改内核？
